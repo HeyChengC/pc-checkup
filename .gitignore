@@ -1,5 +1,6 @@
 scan-*.json
 report-*.html
+!assets/report-template.html
 quarantine/
 *_bak/
 *.pre_*
