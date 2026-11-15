@@ -1,0 +1,107 @@
+# 受保护的文件夹名（UTF-8）。路径里任何一级文件夹叫这些名字，整个文件夹都不会被列入清理清单，更不会被删。
+# 一行一个名字，不分大小写，可以用 * 通配。[方括号] 是分类，会显示在体检报告的"没动的地方"里。
+# 想多保护一个文件夹，把它的名字加到 [user-protected] 下面就行。
+
+[games]
+steamapps
+Steam
+SteamLibrary
+Epic Games
+.egstore
+WeGame
+WeGameApps
+rail_apps
+Riot Games
+Battle.net
+Blizzard*
+Origin Games
+EA Games
+Electronic Arts
+Ubisoft*
+GOG Galaxy
+GOG Games
+XboxGames
+Rockstar Games
+miHoYo*
+HoYoPlay
+Genshin Impact*
+Star Rail*
+ZenlessZoneZero*
+Netease*
+MuMu*
+LDPlayer*
+leidian*
+BlueStacks*
+Tencent Games
+TencentGame*
+WeGameMiniLoader
+Games
+Game
+My Games
+Saved Games
+游戏
+我的游戏
+腾讯游戏
+网易游戏
+原神*
+崩坏*
+英雄联盟*
+三角洲行动*
+
+[chat]
+Tencent
+WeChat
+WeChat Files
+xwechat
+xwechat_files
+Tencent Files
+QQ
+QQNT
+TIM
+WXWork
+WeCom
+DingTalk
+Lark
+LarkShell
+Feishu
+Telegram Desktop
+WhatsApp
+Discord
+Signal
+Slack
+
+[credentials]
+.ssh
+.gnupg
+.aws
+.azure
+.kube
+.docker
+.config
+1Password
+Bitwarden
+KeePass*
+Authy*
+Electrum
+Exodus
+Ledger Live
+
+[ai-tools]
+.claude
+.codex
+.cursor
+.agents
+.gemini
+.openclaw*
+
+[version-control]
+.git
+.svn
+.hg
+
+[drafts]
+com.lveditor.draft
+JianyingPro Drafts
+CapCut Drafts
+
+[user-protected]

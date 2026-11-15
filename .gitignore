@@ -1,0 +1,5 @@
+scan-*.json
+report-*.html
+quarantine/
+*_bak/
+*.pre_*
