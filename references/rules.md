@@ -16,7 +16,7 @@
 
 | category | 是什么 | 判断依据 | 清了会怎样 | 对用户怎么说 |
 |---|---|---|---|---|
-| `recycle-bin` | 回收站 | 所有盘上当前用户的回收站 | **不能恢复**。这是唯一不进隔离区的黄色项 | 回收站里有多少个文件、多大，清空后找不回来 |
+| `recycle-bin` | 回收站 / 废纸篓 | 所有盘上当前用户的回收站 | **不能恢复**。这是唯一不进隔离区的黄色项 | 回收站里有多少个文件、多大，清空后找不回来 |
 | `installer` | 下载文件夹里的旧安装包 | 下载文件夹及其下一层，扩展名是 exe/msi/msix/appx/iso，下载超过 30 天 | 软件装好之后不需要安装包；要重装得重新下载。压缩包、文档、视频不会被列进来 | 旧安装包，列出文件名 |
 | `residue` | 疑似卸载残留 | `AppData` 下的文件夹，名字对不上任何已安装的软件、服务、开机启动项，半年内没有文件变动，且不像游戏存档 | **这是按名字猜的**。便携版软件没有安装记录，也会被猜成残留 | "这几个文件夹看起来是已卸载软件留下的，你认一下名字，还在用的告诉我" |
 | `app-cache`（黄色） | 剪映 / CapCut 的缓存 | `User Data\Cache` | 特效、素材要重新下载。草稿不在这里，不受影响 | 剪映缓存（草稿不动） |
@@ -59,10 +59,10 @@
 
 只用来查大小、列清单，不要据此自己写删除命令。
 
-- 临时文件：`%TEMP%`
-- 浏览器缓存：`%LOCALAPPDATA%\Google\Chrome\User Data\<配置>\Cache`、`Code Cache`；Edge 在 `%LOCALAPPDATA%\Microsoft\Edge\User Data` 下同样的位置
-- 下载缓存：`%LOCALAPPDATA%\pip\Cache`、`%LOCALAPPDATA%\npm-cache`、`%LOCALAPPDATA%\uv\cache`
-- 模型：`%USERPROFILE%\.cache\huggingface\hub`、`.cache\torch`、`.cache\whisper`、`.u2net`、`.ollama\models`
-- 无头浏览器：`%LOCALAPPDATA%\ms-playwright`、`%USERPROFILE%\.cache\puppeteer`
-- 旧安装包：下载文件夹里的 exe / msi / iso
-- 回收站：各盘的 `$Recycle.Bin`
+- Windows 临时文件：`%TEMP%`；macOS：`$TMPDIR`
+- 浏览器缓存：Windows 在 `%LOCALAPPDATA%\Google\Chrome\User Data\<配置>\Cache` 等；macOS 在 `~/Library/Caches/Google/Chrome`、`~/Library/Caches/com.apple.Safari` 等
+- 下载缓存：Windows `%LOCALAPPDATA%\pip\Cache` 等；macOS `~/Library/Caches/pip`、`~/.npm/_cacache`、`~/Library/Caches/Homebrew`
+- 模型：`~/.cache/huggingface/hub`、`~/.cache/torch`、`~/.cache/whisper`、`~/.u2net`、`~/.ollama/models`（两端路径相同）
+- 无头浏览器：Windows `%LOCALAPPDATA%\ms-playwright`；macOS `~/Library/Caches/ms-playwright`、`~/.cache/puppeteer`
+- 旧安装包：下载文件夹里的 exe / msi / iso（Windows），dmg / pkg（macOS）
+- 回收站：各盘的 `$Recycle.Bin`；废纸篓：`~/.Trash`
